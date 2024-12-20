@@ -1,5 +1,60 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import localFont from 'next/font/local'
+
+import '@/assets/scss/globals.scss'
+
+const Montserrat = localFont({
+	src: [
+		{
+			path: '../assets/fonts/Montserrat-Thin.woff2',
+			weight: '100',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-ExtraLight.woff2',
+			weight: '200',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-Light.woff2',
+			weight: '300',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-Regular.woff2',
+			weight: '400',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-Medium.woff2',
+			weight: '500',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-SemiBold.woff2',
+			weight: '600',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-Bold.woff2',
+			weight: '700',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-ExtraBold.woff2',
+			weight: '800',
+			style: 'normal'
+		},
+		{
+			path: '../assets/fonts/Montserrat-Black.woff2',
+			weight: '900',
+			style: 'normal'
+		}
+	],
+	display: 'swap',
+	variable: '--font-montserrat'
+})
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -13,7 +68,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body className={`${Montserrat.variable}`}>{children}</body>
 		</html>
 	)
 }
