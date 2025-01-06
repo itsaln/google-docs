@@ -77,14 +77,14 @@
 
 @layer base {
   * {
-    @apply tw-border-border;
+    @apply border-border;
   }
 
   body {
-    @apply tw-bg-background tw-font-normal tw-text-base tw-text-foreground;
+    @apply bg-background font-normal text-base text-foreground;
   }
 
   a {
-    @apply tw-text-primary tw-transition-opacity hover:tw-opacity-80;
+    @apply text-primary transition-opacity hover:opacity-80;
   }
 }
